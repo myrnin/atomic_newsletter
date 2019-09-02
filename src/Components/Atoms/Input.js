@@ -1,16 +1,16 @@
 import React from 'react';
 
-export const Input = ({ text, placeholder, ongChange, type, disabled, styles }) => (
+const Input = ({ text, placeholder, onChange, type, disabled, theme, value }) => (
 	<input
 		type={type}
 		placeholder={placeholder}
 		disabled={disabled}
-		ongChange={ongChange}
-		className={styles.button}
-		style={{ ...styles }}
-	>
-		{text}
-	</input>
+		onChange={onChange}
+		style={{border: '2px solid black', borderColor: theme === 'danger' ? 'red' : 'blue'}}
+		value={value}
+	></input>
 );
+
+export default Input;
 
 //Add proptypes once props are finalized
